@@ -1,0 +1,21 @@
+{% extends 'session/base.html' %}
+{% load static %}
+
+ {% block main_content %}
+  
+  <h1 class='my-4'>Page Counter: {{counter}} </h1>
+ <div class="container">
+  {% for post in post %}
+   <h2> {{post.title}} </h2>
+   <p> {{post.desc}}</p>
+   <a href="{% url 'post_detail' post.pk %}"><button>Add to bag </button></a>
+   <hr> <br>
+  
+  {% endfor %}
+  
+ </div>
+  
+
+ 
+  
+  {% endblock main_content %}
